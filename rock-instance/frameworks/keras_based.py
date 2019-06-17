@@ -1,5 +1,7 @@
 from keras.models import load_model
 import numpy as np
+import tensorflow as tf
+import json
 
 #
 #  _______  ___   __   __  _______ 
@@ -13,8 +15,14 @@ import numpy as np
 # Keras based model class
 class KerasBasedModel:
 
-  # Instance variables
-  model = None
+  # Constructor
+  def __init__(self):
+    self.session = tf.Session()
+    self.graph = tf.get_default_graph()
+    # Avoid hanging of graph and session
+    with self.graph.as_default():
+      with self.session.as_default():
+        print('Model was initialized.')        
   
   #
   # @def load_model
@@ -30,8 +38,10 @@ class KerasBasedModel:
   def load_model(self, filepath, custom_objects = None, to_compile = True):
     if filepath is None or type(filepath) is not str:
       raise Exception('Invalid path to model.')
-    self.model = load_model(filepath, custom_objects, to_compile)
-    return self.model
+    with self.graph.as_default():
+      with self.session.as_default():
+        self.model = load_model(filepath, custom_objects, to_compile)
+        return self.model
 
   #
   # @def predict
@@ -52,4 +62,8 @@ class KerasBasedModel:
   def predict(self, x, batch_size = None, verbose = 0, steps = None, callbacks = None):
     if self.model is None:
       raise Exception('No model loaded yet.')
-    return self.model.predict(x, batch_size, verbose, steps, callbacks)
+    with self.graph.as_default():
+      with self.session.as_default():
+        # Todo: support beyond data
+        predictions = self.model.predict(x)
+        return json.dumps(predictions.tolist())

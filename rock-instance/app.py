@@ -3,6 +3,8 @@ from flask import Flask, jsonify, request
 import yaml
 from framework import Framework
 import ast
+import traceback
+import json
 
 #
 #  _______  ___   __   __  _______ 
@@ -23,7 +25,7 @@ config = yaml.load(open('./config.yml', 'r'), Loader=yaml.Loader)
 
 # Load framework and model
 fwk = Framework().load(config['which_framework'])
-model = fwk.load_model('./model')
+fwk.load_model('./model')
 
 # Basic route
 @app.route('/')
@@ -44,12 +46,13 @@ def predict():
       raise Exception('Missing input data.')
     # Retrieve prediction
     data = ast.literal_eval(data)
-    predictions = model.predict(data)
+    predictions = fwk.predict(data)
     response_dict = {
       'success': True,
       'predictions': predictions
     }
   except Exception as e:
+    traceback.print_exc()
     response_dict = {
       'success': False,
       'error': str(e)
