@@ -27,5 +27,5 @@ RUN pip install tensorflow keras
 # Copy Rock instance to Docker container
 COPY ./rock-instance/ /usr/src/rock
 
-# Run Flask
+# Run Flask script
 CMD [ "python", "./app.py" ]
