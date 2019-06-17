@@ -28,4 +28,4 @@ RUN pip install tensorflow keras
 COPY ./rock-instance/ /usr/src/rock
 
 # Run Flask
-CMD ["python3", "app.py"]
+ENTRYPOINT [ "./app.py" ]
