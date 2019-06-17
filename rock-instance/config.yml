@@ -1,0 +1,4 @@
+---
+# Which framework wrapper to use.
+# Options: {keras}
+which_framework: 'keras'

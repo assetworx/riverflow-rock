@@ -19,9 +19,13 @@ WORKDIR /usr/src/rock
 
 # Install dependencies
 RUN pip install Flask
+RUN pip install PyYAML
+
+# So far, only support Keras on TF
+RUN pip install tensorflow keras
 
 # Copy Rock instance to Docker container
-COPY ./rock-instance/* /usr/src/rock
+COPY ./rock-instance/ /usr/src/rock
 
 # Run Flask
 CMD ["python", "app.py"]
