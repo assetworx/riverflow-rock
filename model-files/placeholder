@@ -1,0 +1,1 @@
+This placeholder serves to copy along the model-files folder when cloning. Before building your Docker image, ensure that you copy all model related files (such as JSON based architecture or model weights) to this folder.
