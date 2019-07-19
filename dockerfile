@@ -8,7 +8,7 @@
 #  Riverflow AI Dockerfile.
                                               
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
-LABEL maintainer="christian@meetaime.com"
+LABEL maintainer="mail@christianversloot.nl"
 RUN pip install keras tensorflow
 COPY ./src /app
 COPY ./model-files /app/model-files
