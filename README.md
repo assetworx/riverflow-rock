@@ -18,7 +18,7 @@ Containerize your AI models.
   * [License](#license)
   
 # Rationale
-In the paper *Hidden Technical Debt in Machine Learning Systems* by Google, it is argued that although machine learning is a very powerful tool for building prediction systems, it comes with its intrinsic challenges. Specifically, when you build software systems, you introduce what is known as _technical debt_ - "a metaphor introduced (...) to help reason about the long term costs incurred by moving quickly in software engineering".
+In the [paper](https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) *Hidden Technical Debt in Machine Learning Systems* by Google, it is argued that although machine learning is a very powerful tool for building prediction systems, it comes with its intrinsic challenges. Specifically, when you build software systems, you introduce what is known as _technical debt_ - "a metaphor introduced (...) to help reason about the long term costs incurred by moving quickly in software engineering".
 
 That is, when you develop for speed over quality, you'll introduce a lot of choices that you'll need to resolve later on. Since debt carries interest, you'll face an even larger number of issues in the long run compared to your initial engineering effort.
 
