@@ -22,7 +22,7 @@ Machine learning, the authors argue, comes with the default software engineering
 
 ...and perhaps this list is non-exhaustive.
 
-A **Riverflow Rock** is AI containerization technology developed by GSWRX in the Netherlands which attempts to reduce ML technical debt by embedding ML models in an uniform interface that can be reached with REST over HTTP.
+A **Riverflow Rock** is AI containerization technology developed by GSWRX in the Netherlands which attempts to reduce ML technical debt by embedding ML models into an uniform interface that can be reached with REST over HTTP.
 
 ## Architecture
 To do.
