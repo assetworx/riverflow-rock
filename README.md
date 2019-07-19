@@ -6,11 +6,9 @@
 | | \ \| |\ V /  __/ |  | | | | (_) \ V  V / 
 |_|  \_\_| \_/ \___|_|  |_| |_|\___/ \_/\_/  
 </pre>
-
-# Containerize your AI models: Riverflow Rocks
 Containerize your AI models.
 
-## Table of contents
+# Table of contents
 - [Containerize your AI models: Riverflow Rocks](#containerize-your-ai-models--riverflow-rocks)
   * [Table of contents](#table-of-contents)
   * [Rationale](#rationale)
@@ -19,7 +17,7 @@ Containerize your AI models.
   * [Generating Rock images](#generating-rock-images)
   * [License](#license)
   
-## Rationale
+# Rationale
 In the paper *Hidden Technical Debt in Machine Learning Systems* by Google, it is argued that although machine learning is a very powerful tool for building prediction systems, it comes with its intrinsic challenges. Specifically, when you build software systems, you introduce what is known as _technical debt_ - "a metaphor introduced (...) to help reason about the long term costs incurred by moving quickly in software engineering".
 
 That is, when you develop for speed over quality, you'll introduce a lot of choices that you'll need to resolve later on. Since debt carries interest, you'll face an even larger number of issues in the long run compared to your initial engineering effort.
@@ -35,16 +33,16 @@ Machine learning, the authors argue, comes with the default software engineering
 
 A **Riverflow Rock** is AI containerization technology developed by GSWRX in the Netherlands which attempts to reduce ML technical debt by embedding ML models into an uniform interface that can be reached with REST over HTTP.
 
-## Architecture
+# Architecture
 To do.
 
-## Current support
+# Current support
 * Basic support for Keras ([keras.io](https://keras.io)).
 
-## Generating Rock images
+# Generating Rock images
 To do.
 
-## License
+# License
 Riverflow Rock technology is released with the [GNU Affero General Public License v3](./LICENSE) by default. This allows you to use Rocks commercially, to modify them, to distribute them, as well as use them for patent and private use, under the condition that the limitations and conditions as specified by the license are respected.
 
 On a case to case basis, GSWRX B.V. can supply different licenses for Riverflow Rock powered containers. If you are interested in this, please feel free to [get in touch](https://www.degasfabriek.com/contact/).
