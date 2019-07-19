@@ -28,7 +28,7 @@ A **Riverflow Rock** is AI containerization technology developed by GSWRX in the
 To do.
 
 ## Current support
-* Basic support for Keras (keras.io).
+* Basic support for Keras ([keras.io](https://keras.io)).
 
 ## Generating Rock images
 To do.
