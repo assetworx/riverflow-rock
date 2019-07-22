@@ -54,7 +54,24 @@ By consequence, Riverflow Rocks offer uniform access to machine learning models 
 * Usage statistics
 
 ## Generating Rock images
-To do.
+What you need before you can generate a Rock image:
+
+* A running installation of Docker, https://docs.docker.com/install
+* A running installation of Docker Compose, https://docs.docker.com/compose/install
+* A model that fits the Riverflow Framework Handler:
+    * For **Keras**, that is a `HDF5` file that contains both models and weights e.g. what you get when you perform `save_model`.
+
+All right, let's go:
+
+1. Clone the `riverflow-rock` repository. 
+2. Copy your model files to the `model-files` folder.
+3. Possibly configure:
+    - The `ML_FRAMEWORK` environment variable, in `./docker-compose.yml`, if you do not wish to use `keras` in Riverflow.
+    - The `port` number on which the container must run, in `./docker-compose.yml`. Currently, this is port `80`: with `80:80`. However, suppose you wish to run it on `1337`, change it to `1337:80`.
+4. Open up a terminal and `cd` to the root folder of your choice.
+5. Enter the command `docker-compose build` to build the image(s).
+6. Enter the command `docker-compose up` to run the images, or run `docker-compose up -d` to run them in the background.
+
 
 ## License
 Riverflow Rock technology is released with the [GNU Affero General Public License v3](./LICENSE) by default. This allows you to use Rocks commercially, to modify them, to distribute them, as well as use them for patent and private use, under the condition that the limitations and conditions as specified by the license are respected.
