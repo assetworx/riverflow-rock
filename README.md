@@ -17,6 +17,7 @@ Containerize your AI models.
 - [Generating Rock images](#generating-rock-images)
 - [Software built with Riverflow](#software-built-with-riverflow)
   * [Example 1: GPR Analysis Software](#example-1--gpr-analysis-software)
+- [Contributors](#contributors)
 - [License](#license)
   
 ## Rationale
@@ -80,6 +81,8 @@ Analysis software for Ground Penetrating Radar based utility mapping. It runs a 
 
 ![GPR Analysis Software](./assets/gpr_imagery.jpg)
 
+## Contributors
+* Christian Versloot, https://github.com/christianversloot
 
 ## License
 Riverflow Rock technology is released with the [GNU Affero General Public License v3](./LICENSE) by default. This allows you to use Rocks commercially, to modify them, to distribute them, as well as use them for patent and private use, under the condition that the limitations and conditions as specified by the license are respected.
