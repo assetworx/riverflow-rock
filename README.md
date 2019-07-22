@@ -72,6 +72,12 @@ All right, let's go:
 5. Enter the command `docker-compose build` to build the image(s).
 6. Enter the command `docker-compose up` to run the images, or run `docker-compose up -d` to run them in the background.
 
+## Software built with Riverflow
+### Example 1: GPR Analysis Software
+Analysis software for Ground Penetrating Radar based utility mapping. It runs a Keras model in the background that was trained to detect utility material type. A frontend was built that interfaces with the Riverflow Rock container for generating predictions.
+
+![GPR Analysis Software](./assets/gpr_imagery.jpg)
+
 
 ## License
 Riverflow Rock technology is released with the [GNU Affero General Public License v3](./LICENSE) by default. This allows you to use Rocks commercially, to modify them, to distribute them, as well as use them for patent and private use, under the condition that the limitations and conditions as specified by the license are respected.
