@@ -9,13 +9,13 @@
 Containerize your AI models.
 
 ## Table of contents
-- [Containerize your AI models: Riverflow Rocks](#containerize-your-ai-models--riverflow-rocks)
-  * [Table of contents](#table-of-contents)
-  * [Rationale](#rationale)
-  * [Architecture](#architecture)
-  * [Current support](#current-support)
-  * [Generating Rock images](#generating-rock-images)
-  * [License](#license)
+- [Table of contents](#table-of-contents)
+- [Rationale](#rationale)
+- [Architecture](#architecture)
+- [Current support](#current-support)
+- [Future extensions](#future-extensions)
+- [Generating Rock images](#generating-rock-images)
+- [License](#license)
   
 ## Rationale
 In the [paper](https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) *Hidden Technical Debt in Machine Learning Systems* by Google, it is argued that although machine learning is a very powerful tool for building prediction systems, it comes with its intrinsic challenges. Specifically, when you build software systems, you introduce what is known as _technical debt_ - "a metaphor introduced (...) to help reason about the long term costs incurred by moving quickly in software engineering".
