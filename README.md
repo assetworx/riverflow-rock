@@ -18,11 +18,11 @@ Containerize your AI models.
 - [License](#license)
   
 ## Rationale
-In the [paper](https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) *Hidden Technical Debt in Machine Learning Systems* by Google, it is argued that although machine learning is a very powerful tool for building prediction systems, it comes with its intrinsic challenges. Specifically, when you build software systems, you introduce what is known as _technical debt_ - "a metaphor introduced (...) to help reason about the long term costs incurred by moving quickly in software engineering".
+In the [paper](https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf) *Hidden Technical Debt in Machine Learning Systems* by Google, it is argued that although machine learning is a very powerful tool for building prediction systems, it comes with intrinsic challenges. Specifically, when you build software systems, you introduce what is known as _technical debt_ - "a metaphor introduced (...) to help reason about the long term costs incurred by moving quickly in software engineering".
 
-That is, when you develop for speed over quality, you'll introduce a lot of choices that you'll need to resolve later on. Since debt carries interest, you'll face an even larger number of issues in the long run compared to your initial engineering effort.
+That is, when you develop for speed over quality, you'll introduce a lot of issues that you'll need to resolve later on. Since debt carries interest, those nice and perhaps quick 'n dirty shortcuts will haunt you in the long run.
 
-Machine learning, the authors argue, comes with the default software engineering debt - but also with its own set of ML-specific challenges:
+Machine learning, the authors argue, comes with the default software engineering debt **plus** its own set of ML-specific challenges:
 
 * **No uniform interfaces to your models & glue code.** Machine learning models can be developed with a variety of frameworks, such as Keras, TensorFlow, PyTorch and Scikit-learn. They all offer different APIs for when you want to generate predictions. This way, all software applications that need to use these models need to implement them differently.
 * **Difficult version control.** If you update your model, you need to give the current model users the choice whether they want to switch or not. By deploying the models without some kind of uniform interface, you make it difficult to distinguish between model versions.
