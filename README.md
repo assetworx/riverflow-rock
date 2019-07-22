@@ -34,10 +34,24 @@ Machine learning, the authors argue, comes with the default software engineering
 A **Riverflow Rock** is AI containerization technology developed by GSWRX in the Netherlands which attempts to reduce ML technical debt by embedding ML models into an uniform interface that can be reached with REST over HTTP.
 
 # Architecture
-To do.
+This is the architecture of a Riverflow Rock container:
+
+![Riverflow Rock architecture](./assets/architecture.png)
+
+As you can see, the container opens up a [FastAPI](https://github.com/tiangolo/fastapi) REST API. FastAPI is a "high performance, easy to learn, fast to code, ready for production" web framework for Python based APIs. The container by default opens up at port `:80`, but this can be changed in the `./docker-compose.yml` file.
+
+Specifically, a `POST` route named `/prediction` is offered by a Riverflow Rock. It expects a POST body that at least contains the `data` parameter, which contains the data as it is expected by the model for inference. In return, the HTTP client receives a HTTP response containing model predictions.
+
+Internally, the request is propagated to a `Gateway` which handles requests based on the `ML_FRAMEWORK` environment variable that can be passed with `./docker-compose.yml`. If none is passed, it defaults to 'keras'. Based on this environment variable, the data is passed to a specific `Framework Handler` (FWH). This framework handler loads the model files as uploaded in the `model-files` folder and bridges between the gateway and the actual model. By means of the native `predict` API for any of the available frameworks, it generates a prediction and returns the results.
+
+By consequence, Riverflow Rocks offer uniform access to machine learning models and provide isolation during run-time. This way, we attempt to mitigate many of the risks for technical debt introduced before.
 
 # Current support
 * Basic support for Keras ([keras.io](https://keras.io)).
+
+# Future extensions
+* Authentication
+* Usage statistics
 
 # Generating Rock images
 To do.
