@@ -6,7 +6,7 @@
 | | \ \| |\ V /  __/ |  | | | | (_) \ V  V / 
 |_|  \_\_| \_/ \___|_|  |_| |_|\___/ \_/\_/  
 </pre>
-Containerize your AI model.
+Containerize your AI models.
 
 ## Table of contents
 - [Table of contents](#table-of-contents)
