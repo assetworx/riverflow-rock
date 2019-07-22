@@ -31,7 +31,7 @@ def root_entrypoint():
     }
 
 # Generate prediction
-@app.post('/predict')
+@app.post('/prediction')
 def generate_prediction(
   body = Body(None, title='POST body.')
 ):
