@@ -6,7 +6,7 @@
 | | \ \| |\ V /  __/ |  | | | | (_) \ V  V / 
 |_|  \_\_| \_/ \___|_|  |_| |_|\___/ \_/\_/  
 </pre>
-Containerize your AI model and run them as microservices.
+Containerize your AI model.
 
 ## Table of contents
 - [Table of contents](#table-of-contents)
